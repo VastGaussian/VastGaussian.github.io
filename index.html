@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body", style="padding-bottom: 0rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Jiaqi Lin<sup>1*</sup>,</span>
+            <span class="author-block">
+              Zhihao Li<sup>2*</sup>,</span>
+            <span class="author-block">
+              Xiao Tang<sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://people.ucas.ac.cn/~jzliu?language=en">Jianzhuang Liu</a><sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              Shiyong Liu<sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              Jiayue Liu<sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              Yangdi Lu<sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              Xiaofei Wu<sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="http://www.xusongcen.com/">Songcen Xu</a><sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              Youliang Yan<sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              Wenming Yang<sup>1<i class="fa fa-envelope"> </i></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>Huawei Noah's Ark Lab</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Soon)</span>
+                  </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <img alt="Architecture" src="./static/images/teaser.png" width="100%"/>
+      <h2 class="subtitle has-text-centered">
+        VastGaussian achieves higher quality and much faster rendering than state-of-the-art methods in large scene reconstruction,
+        with much shorter training time.        
+      </h2>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing NeRF-based methods for large scene reconstruction often have limitations in visual quality and rendering speed. While the recent 3D Gaussian Splatting works well on small-scale and object-centric scenes, scaling it up to large scenes poses challenges due to limited video memory, long optimization time, and noticeable appearance variations. To address these challenges, we present VastGaussian, the first method for high-quality reconstruction and real-time rendering on large scenes based on 3D Gaussian Splatting. Our approach outperforms existing NeRF-based methods and achieves state-of-the-art results on multiple large scene datasets, enabling fast optimization and high-fidelity real-time rendering.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">Our High-Quality Real-Time Rendering</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-building">
+            <video poster="" id="building" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/VastGaussian_Building.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-rubble">
+            <video poster="" id="rubble" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/VastGaussian_Rubble.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-campus">
+            <video poster="" id="campus" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/VastGaussian_Campus.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-sciart">
+            <video poster="" id="sciart" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/VastGaussian_Sci-Art.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-residence">
+            <video poster="" id="residence" autoplay controls muted loop playsinline>
+              <source src="./static/videos/VastGaussian_Residence.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+      <h2 class="title is-3">Comparison With SOTA</h2>
+      <img alt="Architecture" src="./static/images/table.PNG" width="100%"/>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="content">
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <div class="video-compare-container" id="materialsDiv1">
+            <video class="video" id="materials1" loop playsinline autoPlay muted src="./static/videos/Comparison_MegaNeRF.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="materials1Merge" style="border-radius: 10px;"></canvas>
+          </div>
+        </div>
+
+        <div class="column is-one-third">
+          <div class="video-compare-container" id="materialsDiv2">
+            <video class="video" id="materials2" loop playsinline autoPlay muted src="./static/videos/Comparison_SwitchNeRF.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="materials2Merge" style="border-radius: 10px;"></canvas>
+          </div>
+        </div>
+
+        <div class="column is-one-third">
+          <div class="video-compare-container" id="materialsDiv3">
+            <video class="video" id="materials3" loop playsinline autoPlay muted src="./static/videos/Comparison_3DGS.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="materials3Merge" style="border-radius: 10px;"></canvas>
+          </div>
+        </div>
+      </div>
+      <p class="subtitle has-text-centered">
+        Please click the videos for better view.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> that kindly open sourced the template of this website.
+            The html script of video comparison is borrowed from <a
+            href="https://dorverbin.github.io/refnerf/">Ref-NeRF</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.video-compare-container').forEach(function (container, index) {
+      console.log("Index of the container:", index);
+      container.addEventListener('click', function () {
+        if (index === 0) {
+          this.classList.toggle('expand-right');
+        } else if (index === 2) {
+          this.classList.toggle('expand-left');
+        } else {
+          this.classList.toggle('expanded');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
