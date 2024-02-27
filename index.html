@@ -27,6 +27,17 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/video_comparison.js"></script>
+
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>        
+  
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
 </head>
 <body>
 
@@ -38,41 +49,54 @@
           <h1 class="title is-1 publication-title">VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Jiaqi Lin<sup>1*</sup>,</span>
+              Jiaqi Lin<sup>1*</sup>&nbsp;&nbsp;</span>
             <span class="author-block">
-              Zhihao Li<sup>2*</sup>,</span>
+              Zhihao Li<sup>2*</sup>&nbsp;&nbsp;</span>
             <span class="author-block">
-              Xiao Tang<sup>2</sup>,</span>
+              Xiao Tang<sup>2</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              <a href="https://people.ucas.ac.cn/~jzliu?language=en">Jianzhuang Liu</a><sup>2</sup>,</span>
+              Jianzhuang Liu<sup>3</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              Shiyong Liu<sup>2</sup>,</span>
+              Shiyong Liu<sup>2</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              Jiayue Liu<sup>1</sup>,</span>
+              Jiayue Liu<sup>1</sup>&nbsp;&nbsp;</span><br />
             </span>
             <span class="author-block">
-              Yangdi Lu<sup>2</sup>,</span>
+              Yangdi Lu<sup>2</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              Xiaofei Wu<sup>2</sup>,</span>
+              Xiaofei Wu<sup>2</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              <a href="http://www.xusongcen.com/">Songcen Xu</a><sup>2</sup>,</span>
+              Songcen Xu<sup>2</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              Youliang Yan<sup>2</sup>,</span>
+              Youliang Yan<sup>2</sup>&nbsp;&nbsp;</span>
             </span>
             <span class="author-block">
-              Wenming Yang<sup>1<i class="fa fa-envelope"> </i></sup>
+              Wenming Yang<sup>1†</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
-            <span class="author-block"><sup>2</sup>Huawei Noah's Ark Lab</span>
+            <span class="author-block", style="color:#726f6f"><sup>1</sup>Tsinghua University&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block", style="color:#726f6f"><sup>2</sup>Huawei Noah's Ark Lab&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block", style="color:#726f6f"><sup>3</sup>Chinese Academy of Sciences</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block", style="font-size: 15px;color:#726f6f">linjq22@mails.tsinghua.edu.cn&nbsp;&nbsp;</span>
+            <span class="author-block", style="font-size: 15px;color:#726f6f">zhihao.li@huawei.com&nbsp;&nbsp;</span>
+            <span class="author-block", style="font-size: 15px;color:#726f6f">yang.wenming@sz.tsinghua.edu.cn</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block", style="font-size: 15px;color:#726f6f"><sup>*&nbsp;</sup>Equal contribution&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block", style="font-size: 15px;color:#726f6f"><sup>†&nbsp;</sup>Corresponding author </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block", style="color:#367DBD";>CVPR 2024</span>
           </div>
 
           <div class="column has-text-centered">
@@ -111,15 +135,41 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <img alt="Architecture" src="./static/images/teaser.png" width="100%"/>
-      <h2 class="subtitle has-text-centered">
-        VastGaussian achieves higher quality and much faster rendering than state-of-the-art methods in large scene reconstruction,
-        with much shorter training time.        
-      </h2>
+    <div class="column is-three-fifths">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-building">
+          <video poster="" id="building" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/VastGaussian_Building.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-rubble">
+          <video poster="" id="rubble" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/VastGaussian_Rubble.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-campus">
+          <video poster="" id="campus" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/VastGaussian_Campus.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-sciart">
+          <video poster="" id="sciart" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/VastGaussian_Sci-Art.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-residence">
+          <video poster="" id="residence" autoplay controls muted loop playsinline>
+            <source src="./static/videos/VastGaussian_Residence.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -131,58 +181,17 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Existing NeRF-based methods for large scene reconstruction often have limitations in visual quality and rendering speed. While the recent 3D Gaussian Splatting works well on small-scale and object-centric scenes, scaling it up to large scenes poses challenges due to limited video memory, long optimization time, and noticeable appearance variations. To address these challenges, we present VastGaussian, the first method for high-quality reconstruction and real-time rendering on large scenes based on 3D Gaussian Splatting. Our approach outperforms existing NeRF-based methods and achieves state-of-the-art results on multiple large scene datasets, enabling fast optimization and high-fidelity real-time rendering.
-          </p>
-        </div>
       </div>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        Existing NeRF-based methods for large scene reconstruction often have limitations in visual quality and rendering speed. While the recent 3D Gaussian Splatting works well on small-scale and object-centric scenes, scaling it up to large scenes poses challenges due to limited video memory, long optimization time, and noticeable appearance variations. To address these challenges, we present VastGaussian, the first method for high-quality reconstruction and real-time rendering on large scenes based on 3D Gaussian Splatting. We propose a progressive partitioning strategy to divide a large scene into multiple cells, where the training cameras and point cloud are properly distributed with an airspace-aware visibility criterion. These cells are merged into a complete scene after parallel optimization. We also introduce decoupled appearance modeling into the optimization process to reduce appearance variations in the rendered images. Our approach outperforms existing NeRF-based methods and achieves state-of-the-art results on multiple large scene datasets, enabling fast optimization and high-fidelity real-time rendering.
+      </p>
     </div>
   </section>
 
 
-  <section class="section">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-three-fifths">
-        <h2 class="title is-3">Our High-Quality Real-Time Rendering</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-building">
-            <video poster="" id="building" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/VastGaussian_Building.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-rubble">
-            <video poster="" id="rubble" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/VastGaussian_Rubble.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-campus">
-            <video poster="" id="campus" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/VastGaussian_Campus.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-sciart">
-            <video poster="" id="sciart" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/VastGaussian_Sci-Art.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-residence">
-            <video poster="" id="residence" autoplay controls muted loop playsinline>
-              <source src="./static/videos/VastGaussian_Residence.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section class="section">
+<section class="section">
   <div class="columns is-centered has-text-centered">
     <div class="column is-three-fifths">
       <h2 class="title is-3">Comparison With SOTA</h2>
@@ -224,6 +233,18 @@
   </div>
 </section>
 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{lin2024vastgaussian,
+  title     = {VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction},
+  author    = {Lin, Jiaqi and Li, Zhihao and Tang, Xiao and Liu, Jianzhuang and Liu, Shiyong and Liu, Jiayue and Lu, Yangdi and Wu, Xiaofei and Xu, Songcen and Yan, Youliang and Yang, Wenming},
+  booktitle = {CVPR},
+  year      = {2024}
+}</code></pre>
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
@@ -243,6 +264,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
